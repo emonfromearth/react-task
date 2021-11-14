@@ -10,7 +10,7 @@ Button.defaultProps = {
     text: 'Button'
 }
 Button.propTypes = {
-    text: PropTypes.string,
+    text: PropTypes.object,
     color: PropTypes.string,
     onClick: PropTypes.func
 }

@@ -1,14 +1,12 @@
 import PropTypes from 'prop-types'
 import Button from './Button'
+import {IoIosAddCircle, IoIosCloseCircle} from 'react-icons/io'
 
-const Header = ({title}) => {
-    const onClick = () => {
-        console.log('clicked')
-    }
+const Header = ({title, onAdd, show}) => {
     return (
         <header className='header'>
             <h1>{title}</h1>
-            <Button onClick={onClick} color='green' text='Add'/>
+            <Button onClick={onAdd} color={show ? 'red' : 'green'} text={show ?  <IoIosCloseCircle/> : <IoIosAddCircle/>}/>
         </header>
     )
 }
@@ -18,7 +16,9 @@ Header.defaultProps = {
 }
 
 Header.propTypes = {
-    title: PropTypes.string.isRequired
+    title: PropTypes.string,
+    onAdd: PropTypes.func.isRequired,
+    show: PropTypes.bool.isRequired
 }
 
 export default Header

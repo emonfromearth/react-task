@@ -16,7 +16,7 @@ function App() {
       text: "Learn Vue",
       day: "Tuesday",
       reminder: "2020-01-01",
-      completed: false,
+      completed: true,
     },
     {
       id: 3,
